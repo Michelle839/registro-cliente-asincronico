@@ -8,10 +8,12 @@ const ModalDetallePaquete = ({ cliente, isOpen, onClose }) => {
       <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl ring-1 ring-black/5 max-w-lg w-full transform transition-all">
         {/* Header del Modal */}
         <div className="flex justify-between items-center p-5 sm:p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-t-2xl">
-          <h3 className="text-lg sm:text-xl font-bold text-white">Detalles del Paquete</h3>
+          <h3 className="text-lg sm:text-xl font-bold text-white">
+            Detalles del Paquete
+          </h3>
           <button
             onClick={onClose}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/40"
+            className="text-white/90 hover:text-white focus:outline-none text-2xl leading-none"
             aria-label="Cerrar"
           >
             ×

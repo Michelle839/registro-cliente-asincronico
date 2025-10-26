@@ -1,6 +1,25 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  background-color: #f3f4f6;
+@layer base {
+  html, body, #root {
+    @apply h-full;
+  }
+  body {
+    @apply m-0 bg-gray-50 text-gray-800 antialiased;
+  }
+  h1 {
+    @apply font-bold tracking-tight text-gray-900;
+  }
+}
+
+@layer utilities {
+  .card-surface {
+    @apply bg-white rounded-2xl shadow-2xl ring-1 ring-black/5;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-white font-semibold shadow-sm hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 transition;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-2.5 text-gray-700 shadow-sm hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition;
+  }
 }

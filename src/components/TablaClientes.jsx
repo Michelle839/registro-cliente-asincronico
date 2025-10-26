@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalDetalleCliente from "./ModalDetallePaquete";
+import ModalDetallePaquete from "./ModalDetallePaquete";
 
 const TablaClientes = () => {
   const [modalAbierto, setModalAbierto] = useState(false);
@@ -58,13 +58,13 @@ const TablaClientes = () => {
           <table className="min-w-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-xl">
             <thead className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
               <tr>
-                <th className="py-3 px-4 text-left">DNI</th>
-                <th className="py-3 px-4 text-left">Nombre</th>
-                <th className="py-3 px-4 text-left">Teléfono</th>
-                <th className="py-3 px-4 text-left">Email</th>
-                <th className="py-3 px-4 text-left">Edad</th>
-                <th className="py-3 px-4 text-left">Puntos</th>
-                <th className="py-3 px-4 text-left">Paquete Bienvenida</th>
+                <th className="py-3 px-4 text-center">DNI</th>
+                <th className="py-3 px-4 text-center">Nombre</th>
+                <th className="py-3 px-4 text-center">Teléfono</th>
+                <th className="py-3 px-4 text-center">Email</th>
+                <th className="py-3 px-4 text-center">Edad</th>
+                <th className="py-3 px-4 text-center">Puntos Ganados</th>
+                <th className="py-3 px-4 text-center">Paquete Bienvenida</th>
               </tr>
             </thead>
             <tbody>
@@ -77,12 +77,14 @@ const TablaClientes = () => {
                       : "bg-white dark:bg-gray-900"
                   } hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
                 >
-                  <td className="py-3 px-4 font-medium text-gray-900 dark:text-gray-100">{c.dni}</td>
+                  <td className="py-3 px-4 font-medium text-gray-900 dark:text-gray-100">
+                    {c.dni}
+                  </td>
                   <td className="py-3 px-4">{c.nombre}</td>
-                  <td className="py-3 px-4">{c.telefono}</td>
+                  <td className="py-3 px-4 text-center">{c.telefono}</td>
                   <td className="py-3 px-4">{c.email}</td>
-                  <td className="py-3 px-4">{c.edad}</td>
-                  <td className="py-3 px-4">{c.puntos}</td>
+                  <td className="py-3 px-4 text-center">{c.edad}</td>
+                  <td className="py-3 px-4 text-center">{c.puntos}</td>
                   <td className="py-3 px-4 text-center">
                     <button
                       onClick={() => handleVerMas(c)}
@@ -99,7 +101,7 @@ const TablaClientes = () => {
       </div>
 
       {/* Modal */}
-      <ModalDetalleCliente
+      <ModalDetallePaquete
         cliente={clienteSeleccionado}
         isOpen={modalAbierto}
         onClose={cerrarModal}
