@@ -54,10 +54,11 @@ const TablaClientes = () => {
   return (
     <>
       <div className="w-full">
-        <div className="overflow-x-auto">
-          <table className="min-w-full border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-lg shadow-md">
+        <div className="overflow-x-auto rounded-xl shadow-lg ring-1 ring-black/5">
+          <table className="min-w-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-xl">
             <thead className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200">
               <tr>
+                <th className="py-3 px-4 text-left">DNI</th>
                 <th className="py-3 px-4 text-left">Nombre</th>
                 <th className="py-3 px-4 text-left">Teléfono</th>
                 <th className="py-3 px-4 text-left">Email</th>
@@ -74,8 +75,9 @@ const TablaClientes = () => {
                     index % 2 === 0
                       ? "bg-gray-50 dark:bg-gray-800"
                       : "bg-white dark:bg-gray-900"
-                  } hover:bg-gray-200 dark:hover:bg-gray-700 transition`}
+                  } hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors`}
                 >
+                  <td className="py-3 px-4 font-medium text-gray-900 dark:text-gray-100">{c.dni}</td>
                   <td className="py-3 px-4">{c.nombre}</td>
                   <td className="py-3 px-4">{c.telefono}</td>
                   <td className="py-3 px-4">{c.email}</td>
