@@ -1,5 +1,6 @@
+import Inicio from "./page/inicio.jsx";
 function App() {
-  return;
+  return <Inicio />;
 }
 
 export default App;

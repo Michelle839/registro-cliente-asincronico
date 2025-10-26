@@ -22,9 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-
-# Ignorar carpetas específicas dentro de src
-src/components/
-src/page/
-src/services/
